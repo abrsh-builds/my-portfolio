@@ -153,6 +153,47 @@ h1 {
   color: #e4e7f1;
   padding: 20px;
 }
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-title {
+  color: #8b5cf6;
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-size: 2rem;
+}
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.card {
+  max-width: 600px;
+  margin: 50px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #8b5cf6;
+}
+.icons {
+  color: #8b5cf6;
+  margin-right: 5px;
+}
+.about-card p {
+  font-size: 1.1rem;
+}
 
 @media (max-width: 768px) {
   nav {
