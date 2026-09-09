@@ -92,10 +92,7 @@ h1 {
   color: #8b93a8;
   border-radius: 50%;
   border: 5px solid #8b5cf6;
-  box-shadow:
-    0 0 5px #8b5cf6,
-    0 0 15px #8b5cf6,
-    0 0 30px #8b5cf6;
+  box-shadow: 0 0 30px #8b5cf6;
   margin: 0 auto;
   animation: motion 4s ease-in-out infinite;
 }
@@ -144,16 +141,18 @@ h1 {
 .btn {
   text-decoration: none;
   background-color: #0a0e1a;
-  background: linear-gradient(#8b5cf6, #7b90c5);
+  background: linear-gradient(90deg, #6945bc, #3d2a67);
+  border: 1px solid #0a0e1a3f;
   border-radius: 40px;
-  box-shadow:
-    0 0 2px #8b5cf6,
-    0 0 10px #8b5cf6,
-    0 0 25px #8b5cf6;
+  box-shadow: 0px 0px 20px #8b5cf6;
   color: #e4e7f1;
   padding: 20px;
+  transition: transform 0.3s ease;
 }
-#about {
+.btn:hover {
+  transform: translateY(-3px);
+}
+.section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -166,9 +165,7 @@ h1 {
   font-size: 2rem;
 }
 .about-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  display: flex;
 }
 .card {
   max-width: 600px;
@@ -193,6 +190,33 @@ h1 {
 }
 .about-card p {
   font-size: 1.1rem;
+}
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 70%;
+  margin: 1.2rem;
+}
+.bar-container span,
+.skill {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 3px;
+}
+.bar {
+  height: 10px;
+  background: #1e293b;
+  border-radius: 99px;
+  overflow: hidden;
+  width: 100%;
+}
+.progress {
+  height: 100%;
+  background: linear-gradient(#8b5cf6, #595169);
+  border-radius: 99px;
+  width: 0%;
+  transition: width 1.5s ease;
 }
 
 @media (max-width: 768px) {
@@ -223,6 +247,10 @@ h1 {
 
   .btn {
     text-align: center;
+  }
+  .about-container {
+    flex-direction: column;
+    gap: 0px;
   }
 }
 

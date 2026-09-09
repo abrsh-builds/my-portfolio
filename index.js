@@ -40,3 +40,18 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
+
+const progress = document.querySelectorAll(".progress");
+window.addEventListener("scroll", () => {
+  const skillSection = document.getElementById("skills");
+  const top = skillSection.getBoundingClientRect().top;
+  if (top < window.innerHeight - 100 && top > -110) {
+    progress.forEach((progress) => {
+      progress.style.width = progress.dataset.width + "%";
+    });
+  } else {
+    progress.forEach((progress) => {
+      progress.style.width = "0%";
+    });
+  }
+});
