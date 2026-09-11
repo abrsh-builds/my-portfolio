@@ -5,6 +5,7 @@ const words = [
   "JavaScript Programmer",
   "Future Full-Stack Developer",
 ];
+
 let wordsIndex = 0;
 let deleting = false;
 let charIndex = 0;
@@ -32,6 +33,8 @@ function typingEffect() {
 }
 
 typingEffect();
+
+const progress = document.querySelectorAll(".progress");
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
   if (window.scrollY > 50) {
@@ -41,11 +44,10 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const progress = document.querySelectorAll(".progress");
 window.addEventListener("scroll", () => {
   const skillSection = document.getElementById("skills");
   const top = skillSection.getBoundingClientRect().top;
-  if (top < window.innerHeight - 100 && top > -110) {
+  if (top < window.innerHeight - 100) {
     progress.forEach((progress) => {
       progress.style.width = progress.dataset.width + "%";
     });
@@ -54,4 +56,22 @@ window.addEventListener("scroll", () => {
       progress.style.width = "0%";
     });
   }
+});
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 150;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
 });
