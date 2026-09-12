@@ -3,6 +3,9 @@ html {
   overflow-x: hidden;
   max-width: 100%;
 }
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: #0b0f19;
   color: #f3f4f6;
@@ -46,24 +49,24 @@ section {
   font-weight: 700;
 }
 .nav-links a:hover {
-  color: #6366f1;
+  color: #8b5cf6;
   font-weight: bold;
 }
 .nav-links a.active {
-  color: #6366f1;
+  color: #8b5cf6;
 }
 .logo {
   font-size: 1.2rem;
 }
 
 .logo span {
-  color: #6366f1;
+  color: #8b5cf6;
 }
 .logo i {
   box-shadow:
-    0 0 5px #6366f1,
-    0 0 15px #6366f1,
-    0 0 30px #6366f1;
+    0 0 5px #8b5cf6,
+    0 0 15px #8b5cf6,
+    0 0 30px #8b5cf6;
   background: none;
   border-radius: 50%;
 }
@@ -74,11 +77,15 @@ h1 {
   color: #ffffff;
 }
 #typing {
-  color: #6366f1;
+  color: #8b5cf6;
   margin: 0;
   font-family: "JetBrains Mono";
   font-style: italic;
   font-weight: 100 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 @keyframes motion {
   50% {
@@ -96,10 +103,10 @@ h1 {
   align-items: center;
   justify-content: center;
   font-size: 4rem;
-  color: #9ca3af;
+  color: #8b93a8;
   border-radius: 50%;
-  border: 5px solid #6366f1;
-  box-shadow: 0 0 40px #6366f14d;
+  border: 5px solid #8b5cf6;
+  box-shadow: 0 0 35px #8b5cf640;
   margin: 0 auto;
   animation: motion 4s ease-in-out infinite;
 }
@@ -122,7 +129,7 @@ h1 {
 }
 .hero-desc {
   font-size: 1.4rem;
-  color: #9ca3af;
+  color: #8b93a8;
 }
 .left {
   display: flex;
@@ -148,10 +155,10 @@ h1 {
 .btn {
   text-decoration: none;
   background-color: #0b0f19;
-  background: linear-gradient(90deg, #4f46e5, #6366f1);
-  border: 1px solid #6366f133;
+  background: linear-gradient(90deg, #6d28d9, #8b5cf6);
+  border: 1px solid #8b5cf633;
   border-radius: 40px;
-  box-shadow: 0px 0px 20px #6366f14d;
+  box-shadow: 0px 0px 18px #8b5cf640;
   color: #ffffff;
   font-weight: 700;
   padding: 20px;
@@ -159,8 +166,8 @@ h1 {
 }
 .btn.secondary {
   background: transparent;
-  color: #6366f1;
-  border: 1px solid #6366f1;
+  color: #8b5cf6;
+  border: 1px solid #8b5cf6;
   box-shadow: none;
 }
 .btn:hover {
@@ -173,7 +180,7 @@ h1 {
   align-items: center;
 }
 .section-title {
-  color: #6366f1;
+  color: #8b5cf6;
   font-family: "Inter";
   font-weight: 100 900;
   font-size: 2rem;
@@ -197,16 +204,16 @@ h1 {
 }
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 20px #6366f140;
-  border-color: #6366f166;
+  box-shadow: 0 0 20px #8b5cf633;
+  border-color: #8b5cf655;
 }
 .icons {
-  color: #6366f1;
+  color: #8b5cf6;
   margin: 5px;
 }
 .about-card p {
   font-size: 1.3rem;
-  color: #9ca3af;
+  color: #8b93a8;
 }
 .bar-container {
   display: flex;
@@ -231,7 +238,7 @@ h1 {
 }
 .progress {
   height: 100%;
-  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  background: linear-gradient(90deg, #6d28d9, #8b5cf6);
   border-radius: 99px;
   width: 0%;
   transition: width 1.5s ease;
@@ -248,7 +255,7 @@ h1 {
   height: auto;
 }
 .project-card p {
-  color: #9ca3af;
+  color: #8b93a8;
 }
 .project-info {
   display: flex;
@@ -264,15 +271,15 @@ h1 {
 
 .project-links a {
   text-decoration: none;
-  color: #6366f1;
+  color: #8b5cf6;
   font-weight: 600;
   transition: color 0.2s ease;
 }
 .project-links a:hover {
-  color: #818cf8;
+  color: #a78bfa;
 }
 .contact-sub {
-  color: #9ca3af;
+  color: #8b93a8;
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -301,15 +308,15 @@ h1 {
 }
 
 .contact-item:hover {
-  color: #6366f1;
-  border-color: #6366f1;
+  color: #8b5cf6;
+  border-color: #8b5cf6;
 }
 
 footer {
   text-align: center;
   padding: 40px 24px;
   border-top: 1px solid #ffffff14;
-  color: #9ca3af;
+  color: #8b93a8;
 }
 
 .footer-socials {
@@ -321,12 +328,12 @@ footer {
 }
 
 .footer-socials a {
-  color: #9ca3af;
+  color: #8b93a8;
   transition: color 0.2s ease;
 }
 
 .footer-socials a:hover {
-  color: #6366f1;
+  color: #8b5cf6;
 }
 
 .footer-year {
@@ -400,6 +407,9 @@ footer {
   .photo-placeholder {
     height: 300px;
     width: 300px;
+  }
+  #typing {
+    font-size: 1.1rem;
   }
 
   .about-card p,
