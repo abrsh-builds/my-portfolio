@@ -1,5 +1,7 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 body {
   background-color: #0b0f19;
@@ -13,6 +15,7 @@ header {
   z-index: 1000;
   background: #0b0f1cd9;
   transition: background 0.3s ease;
+  text-align: center;
 }
 .scrolled {
   backdrop-filter: blur(14px);
@@ -22,9 +25,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 10px 20px;
   flex-wrap: wrap;
   gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 section {
   padding-top: 50px;
@@ -48,9 +53,7 @@ section {
   color: #6366f1;
 }
 .logo {
-  margin-left: 20px;
   font-size: 1.2rem;
-  padding: 6px 24px;
 }
 
 .logo span {
@@ -96,7 +99,7 @@ h1 {
   color: #9ca3af;
   border-radius: 50%;
   border: 5px solid #6366f1;
-  box-shadow: 0 0 30px #6366f14d;
+  box-shadow: 0 0 40px #6366f14d;
   margin: 0 auto;
   animation: motion 4s ease-in-out infinite;
 }
@@ -105,7 +108,6 @@ h1 {
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  border: 5px solid #0b0f19;
   object-fit: cover;
 }
 .hero {
@@ -377,10 +379,27 @@ footer {
 @media (max-width: 480px) {
   nav {
     flex-direction: column;
-    gap: 0;
+    gap: 1.2rem;
+    padding: 0;
+  }
+  .nav-links {
+    gap: 0.9rem;
+    margin: 0;
+    padding: 0;
   }
   h1 {
     font-size: 1.8rem;
+  }
+  .section-title {
+    margin: 0;
+    padding: 0;
+  }
+  .section {
+    padding-top: 25px;
+  }
+  .photo-placeholder {
+    height: 300px;
+    width: 300px;
   }
 
   .about-card p,

@@ -32,4 +32,4 @@ My personal developer portfolio, built with vanilla HTML, CSS, and JavaScript â€
 
 - Email: abrehamabyu731@gmail.com
 - GitHub: [github.com/abrsh-builds](https://github.com/abrsh-builds)
-- LinkedIn: [profile link]
+- LinkedIn: [](https://www.linkedin.com/in/abreham-abyu-081906394/)
